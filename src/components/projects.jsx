@@ -114,7 +114,7 @@ const Projects = () => {
                 : null
                 }
               </div>
-              <div class="sticky top-0 bg-white z-10 float-right mb-4">
+              <div className="sticky top-0 bg-white z-10 float-right mb-4">
                 <h2>{proj.role}</h2>
               </div>
             </div>
