@@ -24,7 +24,7 @@ const Projects = () => {
       desc: "My own portfolio built with Vite and React.",
       tech: ["React", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "ReactBits"],
       live: "",
-      code: "",
+      code: "https://github.com/daliaalymohamed/my_portfoilio",
       image: "/src/assets/myPortfoilio.png"
     },
     {
