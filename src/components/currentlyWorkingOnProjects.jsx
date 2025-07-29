@@ -38,18 +38,18 @@ const CurrentlyWorking = () => {
                             </div>
                             <div className="flex gap-4 mt-6">
                                 <a
-                                href={""}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-sm font-medium text-indigo-900/70 hover:text-indigo-900/70 hover:underline flex items-center gap-1"
+                                  href={""}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="text-sm font-medium text-indigo-900/70 hover:text-indigo-900/70 hover:underline flex items-center gap-1"
                                 >
                                 Live Demo →
                                 </a>
                                 <a
-                                href={"https://github.com/daliaalymohamed/farmersmarket"}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="text-sm font-medium text-gray-500 hover:text-gray-700 hover:underline flex items-center gap-1"
+                                  href={"https://github.com/daliaalymohamed/farmersmarket"}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="text-sm font-medium text-gray-500 hover:text-gray-700 hover:underline flex items-center gap-1"
                                 >
                                 Code →
                                 </a>

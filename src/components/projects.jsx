@@ -2,6 +2,8 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { projects } from '../data/projects-data';
+
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -9,57 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   const containerRef = useRef();
   const projectRefs = useRef([]);
-
-  const projects = [
-    {
-      title: "Telemid Ticketing System",
-      desc: "",
-      tech: ["React.js", "Redux", "Node.js", "MongoDB", "Express.js", "JWT", "Material-UI", "Docker"],
-      live: "",
-      code: "",
-      image: "/src/assets/telemedTicketing.png" 
-    },
-    {
-      title: "Portfolio Website",
-      desc: "My own portfolio built with Vite and React.",
-      tech: ["React", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "ReactBits"],
-      live: "",
-      code: "https://github.com/daliaalymohamed/my_portfoilio",
-      image: "/src/assets/myPortfoilio.png"
-    },
-    {
-      title: "Ta2heel",
-      desc: "",
-      tech: ["React.js", "React Native", "Node.js", "MongoDB", "JWT", "websockets", "Bootstrap"],
-      live: "https://npd-egypt.net/",
-      code: "",
-      image: "/src/assets/ta2heel.png"
-    },
-    {
-      title: "Kenana Online PWA Portal",
-      desc: "",
-      tech: ["React.js", "React Native", "Node.js", "MongoDB", "JWT", "websockets", "Bootstrap"],
-      live: "https://kenanaonline.com/",
-      code: "",
-      image: "/src/assets/kenanaOnline.png"
-    },
-    {
-      title: "GTA Portal – Giza Tourism Administration Odoo 8",
-      desc: "",
-      tech: ["Open Object Framework", "PostgreSQL"],
-      live: "",
-      code: "",
-      image: "/src/assets/odoo.png"
-    },
-    {
-      title: "Payment System – “PSU” Odoo 8",
-      desc: "",
-      tech: ["Open Object Framework", "PostgreSQL"],
-      live: "",
-      code: "",
-      image: "/src/assets/odoo.png"
-    }
-  ];
 
   useEffect(() => {
     const projects = projectRefs.current.filter(el => el);
@@ -162,6 +113,9 @@ const Projects = () => {
                 </a>
                 : null
                 }
+              </div>
+              <div class="sticky top-0 bg-white z-10 float-right mb-4">
+                <h2>{proj.role}</h2>
               </div>
             </div>
           </div>

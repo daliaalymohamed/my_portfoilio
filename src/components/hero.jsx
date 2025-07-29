@@ -55,12 +55,12 @@ const Hero = () => {
           transition={{ duration: 0.8, staggerChildren: 0.2, delayChildren: 0.8 }}
           className="flex justify-center space-x-6"
         >
-          <Link
+          <a
             href="#projects"
             className="inline-block bg-white text-indigo-900 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105"
           >
             View My Work
-          </Link>
+          </a>
           <a
             href="#contact"
             className="inline-block border-2 border-indigo-300 text-indigo-100 font-bold py-3 px-8 rounded-lg hover:bg-indigo-300 hover:text-indigo-900 transition-all duration-300 transform hover:scale-105"
