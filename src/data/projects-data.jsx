@@ -18,7 +18,7 @@ export  const projects = [
       title: "Portfolio Website",
       desc: "My own portfolio built with Vite and React.",
       tech: ["React", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "ReactBits"],
-      live: "",
+      live: "https://daliaalyportfolio.netlify.app/",
       code: "https://github.com/daliaalymohamed/my_portfoilio",
       image: myPortfoilio,
       role: "Developer" 
@@ -43,7 +43,7 @@ export  const projects = [
     },
     {
       title: "GTA Portal – Giza Tourism Administration Odoo 8",
-      desc: "",
+      desc: "A customized portal system built on Odoo 8 for the Giza Tourism Administration (GTA), enabling streamlined management of tourism services",
       tech: ["Open Object Framework", "PostgreSQL"],
       live: "",
       code: "",
@@ -52,7 +52,7 @@ export  const projects = [
     },
     {
       title: "Payment System – “PSU” Odoo 8",
-      desc: "",
+      desc: "An internal financial management system built on Odoo 8 for streamlined handling of payments and expenses within the department. The PSU (Payment Services Unit) application centralizes payment requests, approvals, and expense tracking, improving transparency, accountability, and efficiency in financial operations. Designed to support internal workflows, it reduces manual processes and ensures accurate, auditable record-keeping for all departmental transactions",
       tech: ["Open Object Framework", "PostgreSQL"],
       live: "",
       code: "",

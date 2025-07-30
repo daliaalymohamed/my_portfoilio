@@ -1,7 +1,39 @@
 // src/components/CurrentlyWorking.jsx
+import { useState, useEffect } from 'react';
+import farmersMarket from '../assets/farmersMarket.png'
 import { Icon } from '@iconify/react';
 
 const CurrentlyWorking = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading (e.g., image load, data fetch)
+    // You can extend this later to check actual image load
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800); // Adjust timing as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section id="currently-working" className="py-20 px-4 bg-indigo-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">🚀 Currently Working On</h2>
+          <p className="text-lg text-gray-600 mb-12">Loading what's new...</p>
+
+          <div className="flex flex-col items-center justify-center py-12">
+            <Icon
+              icon="svg-spinners:bars-scale-fade"
+              className="text-indigo-600 w-14 h-14 mx-auto"
+            />
+            <p className="mt-4 text-gray-600 font-medium">Just a moment...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <section id="currently-working" className="py-20 px-4 bg-indigo-50">
       <div className="max-w-4xl mx-auto text-center">
@@ -17,7 +49,8 @@ const CurrentlyWorking = () => {
                 {/* Image */}
                 <div className="md:w-1/3 mb-4 md:mb-0 rounded-lg overflow-hidden">
                     <img
-                        src="/src/assets/farmersMarket.png"
+                        loading="lazy"
+                        src={farmersMarket}
                         alt="Farmer's Market E-Commerce Dashboard Preview"
                         className="w-full h-48 md:h-full object-cover object-center transition-transform duration-300 hover:scale-105"
                     />
@@ -37,14 +70,14 @@ const CurrentlyWorking = () => {
                                 <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">JWT</span>
                             </div>
                             <div className="flex gap-4 mt-6">
-                                <a
+                                {/* <a
                                   href={""}
                                   target="_blank"
                                   rel="noreferrer"
                                   className="text-sm font-medium text-indigo-900/70 hover:text-indigo-900/70 hover:underline flex items-center gap-1"
                                 >
                                 Live Demo →
-                                </a>
+                                </a> */}
                                 <a
                                   href={"https://github.com/daliaalymohamed/farmersmarket"}
                                   target="_blank"

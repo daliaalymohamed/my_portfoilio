@@ -1,9 +1,9 @@
 // src/components/projects.jsx
-import { useEffect, useRef } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { projects } from '../data/projects-data';
-
+import { Icon } from '@iconify/react';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -11,8 +11,19 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   const containerRef = useRef();
   const projectRefs = useRef([]);
+  const [isLoading, setIsLoading] = useState(true); // Track loading state
 
   useEffect(() => {
+    // Simulate brief loading (e.g., fetch, image load)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800); // Adjust delay as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isLoading) return;
     const projects = projectRefs.current.filter(el => el);
 
     gsap.set(projects, { y: 50, opacity: 0 });
@@ -35,7 +46,7 @@ const Projects = () => {
       animation.scrollTrigger?.kill();
       animation.kill();
     };
-  }, []);
+  }, [isLoading]);
 
   return (
     <section
@@ -50,77 +61,90 @@ const Projects = () => {
         Explore some of the apps I've built with modern tools and a focus on clean code and user experience.
       </p>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((proj, i) => (
-          <div
-            ref={el => (projectRefs.current[i] = el)}
-            key={i}
-            className="group bg-white/80 backdrop-blur-sm border border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-          >
-            {/* Project Image with Hover Zoom */}
-            <div className="relative overflow-hidden rounded-t-2xl">
-              <img
-                src={proj.image}
-                alt={proj.title}
-                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              {/* Optional: Overlay on hover */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-            </div>
-
-            {/* Project Content */}
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-800 group-hover:text-indigo-700 transition-colors duration-300">
-                {proj.title}
-              </h3>
-              <p className="text-gray-600 mt-2 text-sm leading-relaxed">
-                {proj.desc}
-              </p>
-
-              {/* Tech Badges */}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {proj.tech.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs px-2.5 py-1 bg-indigo-50 text-indigo-900/70 rounded-full border border-indigo-100 font-medium"
-                  >
-                    {t}
-                  </span>
-                ))}
+      {/* Loading State */}
+      {isLoading ? (
+        <div className="flex flex-col items-center justify-center py-16 text-center">
+          <Icon
+            icon="svg-spinners:bars-scale-fade"
+            className="text-indigo-600 w-14 h-14 mx-auto"
+          />
+          <p className="mt-4 text-gray-600 font-medium">Loading projects...</p>
+        </div>
+      ) : (
+        /* Projects Grid */
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((proj, i) => (
+            <div
+              ref={el => (projectRefs.current[i] = el)}
+              key={i}
+              className="group bg-white/80 backdrop-blur-sm border border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+            >
+              {/* Project Image with Hover Zoom */}
+              <div className="relative overflow-hidden rounded-t-2xl">
+                <img
+                  loading="lazy"
+                  src={proj.image}
+                  alt={proj.title}
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Optional: Overlay on hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
 
-              {/* Links */}
-              <div className="flex gap-4 mt-6">
-                { proj.live !== "" ? 
+              {/* Project Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 group-hover:text-indigo-700 transition-colors duration-300">
+                  {proj.title}
+                </h3>
+                <p className="text-gray-600 mt-2 text-sm leading-relaxed">
+                  {proj.desc}
+                </p>
+
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {proj.tech.map((t, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs px-2.5 py-1 bg-indigo-50 text-indigo-900/70 rounded-full border border-indigo-100 font-medium"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex gap-4 mt-6">
+                  { proj.live !== "" ? 
+                    <a
+                      href={proj.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-medium text-indigo-900/70 hover:text-indigo-900/70 hover:underline flex items-center gap-1"
+                    >
+                      Live Demo →
+                    </a>
+                    : null
+                  }
+                  { proj.code !== "" ? 
                   <a
-                    href={proj.live}
+                    href={proj.code}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium text-indigo-900/70 hover:text-indigo-900/70 hover:underline flex items-center gap-1"
+                    className="text-sm font-medium text-gray-500 hover:text-gray-700 hover:underline flex items-center gap-1"
                   >
-                    Live Demo →
+                    Code →
                   </a>
                   : null
-                }
-                { proj.code !== "" ? 
-                <a
-                  href={proj.code}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-700 hover:underline flex items-center gap-1"
-                >
-                  Code →
-                </a>
-                : null
-                }
-              </div>
-              <div className="sticky top-0 bg-white z-10 float-right mb-4">
-                <h2>{proj.role}</h2>
+                  }
+                </div>
+                <div className="sticky top-0 bg-white z-10 float-right mb-4">
+                  <h2>{proj.role}</h2>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };
