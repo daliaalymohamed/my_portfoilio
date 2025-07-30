@@ -1,3 +1,9 @@
+import  telemedTicketing  from "../assets/telemedTicketing.png";
+import  myPortfoilio  from "../assets/myPortfoilio.png";
+import  ta2heel  from "../assets/ta2heel.png";
+import  kenanaOnline  from "../assets/kenanaOnline.png";
+import  odoo  from "../assets/odoo.png";
+
 export  const projects = [
     {
       title: "Telemid Ticketing System",
@@ -5,7 +11,7 @@ export  const projects = [
       tech: ["React.js", "Redux", "Node.js", "MongoDB", "Express.js", "JWT", "Material-UI", "Docker"],
       live: "",
       code: "",
-      image: "/src/assets/telemedTicketing.png",
+      image: telemedTicketing,
       role: "Supervisor" 
     },
     {
@@ -14,7 +20,7 @@ export  const projects = [
       tech: ["React", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "ReactBits"],
       live: "",
       code: "https://github.com/daliaalymohamed/my_portfoilio",
-      image: "/src/assets/myPortfoilio.png",
+      image: myPortfoilio,
       role: "Developer" 
     },
     {
@@ -23,7 +29,7 @@ export  const projects = [
       tech: ["React.js", "React Native", "Node.js", "MongoDB", "JWT", "websockets", "Bootstrap"],
       live: "https://npd-egypt.net/",
       code: "",
-      image: "/src/assets/ta2heel.png",
+      image: ta2heel,
       role: "Developer" 
     },
     {
@@ -32,7 +38,7 @@ export  const projects = [
       tech: ["React.js", "React Native", "Node.js", "MongoDB", "JWT", "websockets", "Bootstrap"],
       live: "https://kenanaonline.com/",
       code: "",
-      image: "/src/assets/kenanaOnline.png",
+      image: kenanaOnline,
       role: "Developer" 
     },
     {
@@ -41,7 +47,7 @@ export  const projects = [
       tech: ["Open Object Framework", "PostgreSQL"],
       live: "",
       code: "",
-      image: "/src/assets/odoo.png",
+      image: odoo,
       role: "Developer" 
     },
     {
@@ -50,7 +56,7 @@ export  const projects = [
       tech: ["Open Object Framework", "PostgreSQL"],
       live: "",
       code: "",
-      image: "/src/assets/odoo.png",
+      image: odoo,
       role: "Developer" 
     },
 ]
