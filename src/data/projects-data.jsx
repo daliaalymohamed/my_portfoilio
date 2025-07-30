@@ -1,7 +1,7 @@
 export  const projects = [
     {
       title: "Telemid Ticketing System",
-      desc: "",
+      desc: "Application for managing issues, patient's sessions, cancelation reasons and hospitals",
       tech: ["React.js", "Redux", "Node.js", "MongoDB", "Express.js", "JWT", "Material-UI", "Docker"],
       live: "",
       code: "",
@@ -19,7 +19,7 @@ export  const projects = [
     },
     {
       title: "Ta2heel",
-      desc: "",
+      desc: "Application for supporting persons with disabilities in accessing better opportunities for career development",
       tech: ["React.js", "React Native", "Node.js", "MongoDB", "JWT", "websockets", "Bootstrap"],
       live: "https://npd-egypt.net/",
       code: "",
@@ -28,7 +28,7 @@ export  const projects = [
     },
     {
       title: "Kenana Online PWA Portal",
-      desc: "",
+      desc: "Kenana Online provides website and portal creation services aimed at encouraging government and civil institutions, as well as individual experts, specialists, and practitioners, to publish specialized Arabic knowledge on the internet",
       tech: ["React.js", "React Native", "Node.js", "MongoDB", "JWT", "websockets", "Bootstrap"],
       live: "https://kenanaonline.com/",
       code: "",
