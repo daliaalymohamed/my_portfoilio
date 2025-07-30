@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="flex flex-wrap justify-center gap-4">
         <a
           href="mailto:daliaalymohamed@gmail.com"
-          className="bg-indigo-900/70 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-indigo-900/70 transition"
+          className="text-white font-bold py-3 px-6 rounded-lg shadow bg-indigo-900/70 hover:bg-indigo-900 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
           Email Me
         </a>
@@ -17,7 +17,7 @@ const Contact = () => {
           href="https://github.com/daliaalymohamed"
           target="_blank"
           rel="noreferrer"
-          className="border-2 border-indigo-900/70 text-indigo-900/70 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 transition"
+          className="border-2 border-indigo-900/70 text-indigo-900/70 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
           GitHub
         </a>
@@ -25,7 +25,7 @@ const Contact = () => {
           href="https://www.linkedin.com/in/dalia-aly-368a9573/"
           target="_blank"
           rel="noreferrer"
-          className="border-2 border-iindigo-900/70 text-indigo-900/70 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 transition"
+          className="border-2 border-iindigo-900/70 text-indigo-900/70 font-bold py-3 px-6 rounded-lg hover:bg-indigo-50 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
         >
           LinkedIn
         </a>

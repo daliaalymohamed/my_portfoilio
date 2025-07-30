@@ -45,6 +45,7 @@ const Navbar = () => {
             { name: 'About', href: '#about' },
             { name: 'Skills', href: '#skills' },
             { name: 'Projects', href: '#projects' },
+            { name: 'Download CV', href: '#download-cv'},
             { name: 'Contact', href: '#contact' },
           ].map((item) => (
             <li key={item.name}>

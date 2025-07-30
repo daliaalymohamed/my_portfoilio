@@ -34,9 +34,6 @@ const About = () => {
           startOnVisible={true} // 🔥 Key: only start when in viewport
           className="leading-relaxed"
           textColors={["rgb(49 46 129 / 0.7)", "rgb(49 46 129)", "rgb(55 65 81 )", "#7c3aed"]} // Optional: color per sentence
-          onSentenceComplete={(sentence, index) => {
-            console.log("Completed:", sentence, "Index:", index);
-          }}
         />
       </div>
     </section>
