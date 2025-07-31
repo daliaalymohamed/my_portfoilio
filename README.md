@@ -2,7 +2,7 @@
 
 Hi, I'm **Dalia Aly** — a **Senior Software Developer** passionate about building clean, responsive, and interactive web applications. This is my personal portfolio built with modern tools and performance in mind.
 
-🔗 **Live Demo**: [https://daliaaly.com](https://daliaaly.com) *(replace with your URL)*  
+🔗 **Live Demo**: [https://daliaalyportfolio.netlify.app](https://daliaalyportfolio.netlify.app/) *(replace with your URL)*  
 📂 **Built with**: React 19, Vite, Tailwind CSS, GSAP, Framer Motion & `reactbits`
 
 ---
