@@ -20,6 +20,7 @@ const Skills = () => {
     { name: 'MongoDB', icon: 'devicon:mongodb-wordmark', color: '#47A248' },
     { name: 'PostgreSQL', icon: 'devicon:postgresql-wordmark', color: '#336791' },
     { name: 'MySQL', icon: 'devicon:mysql-wordmark', color: '#F29111' },
+    { name: 'Redis', icon: 'devicon:redis', color: '#DC382D' },
     { name: 'Odoo', icon: 'simple-icons:odoo', color: '#000000'},
     { name: 'Git', icon: 'devicon:git-wordmark', color: '#F1502F' },
     { name: 'GitHub', icon: 'devicon:github-wordmark', color: '#181717' },
