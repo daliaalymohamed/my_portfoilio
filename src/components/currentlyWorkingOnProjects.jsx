@@ -68,6 +68,11 @@ const CurrentlyWorking = () => {
                                 <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Mongo</span>
                                 <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Redux</span>
                                 <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">JWT</span>
+                                <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Tailwind CSS</span>
+                                <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">MeiliSearch</span>
+                                <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Redis</span>
+                                <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Docker</span>
+ 
                             </div>
                             <div className="flex gap-4 mt-6">
                                 {/* <a
