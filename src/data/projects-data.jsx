@@ -1,3 +1,4 @@
+import  InventoryManagement  from "../assets/InventoryManagement.png";
 import  telemedTicketing  from "../assets/telemedTicketing.png";
 import  myPortfoilio  from "../assets/myPortfoilio.png";
 import  ta2heel  from "../assets/ta2heel.png";
@@ -5,6 +6,15 @@ import  kenanaOnline  from "../assets/kenanaOnline.png";
 import  odoo  from "../assets/odoo.png";
 
 export  const projects = [
+    {
+      title: "Inventory Managment System",
+      desc: "A full-stack inventory management system that tracks physical assets end-to-end — from intake and storage placement through assignment, restoration, and retirement — with QR-code-based tracking, role-based access control, and audit logging throughout",
+      tech: ["Next,js","TypeScript","Redux", "MongoDB", "Express.js", "JWT", "Tailwind CSS 4","TOTP second factor" ,"Docker"],
+      live: "",
+      code: "",
+      image: InventoryManagement,
+      role: "Full Stack Developer" 
+    },
     {
       title: "Telemid Ticketing System",
       desc: "Application for managing issues, patient's sessions, cancelation reasons and hospitals",

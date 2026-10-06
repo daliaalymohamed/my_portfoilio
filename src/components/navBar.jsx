@@ -44,6 +44,7 @@ const Navbar = () => {
             { name: 'Home', href: '#home' },
             { name: 'About', href: '#about' },
             { name: 'Skills', href: '#skills' },
+            { name: 'Tools', href: '#tools' },
             { name: 'Projects', href: '#projects' },
             { name: 'Download CV', href: '#download-cv'},
             { name: 'Contact', href: '#contact' },
@@ -91,7 +92,7 @@ const Navbar = () => {
           role="menu" 
           aria-label="Mobile navigation"
         >
-          {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+          {['Home', 'About', 'Skills', 'Tools', 'Projects', 'Contact'].map((item) => (
             <li key={item} role="none">
               <a
                 href={`#${item.toLowerCase()}`}

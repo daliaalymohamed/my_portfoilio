@@ -4,6 +4,7 @@ const Navbar = lazy(() => import('./components/navBar'));
 const Hero = lazy(() => import('./components/hero'));
 const About = lazy(() => import('./components/about'));
 const Skills = lazy(() => import('./components/skills'));
+const Tools = lazy(() => import('./components/tools.jsx'));
 const Projects = lazy(() => import('./components/projects'));
 const CurrentlyWorking = lazy(() => import('./components/currentlyWorkingOnProjects'));
 const DownloadCV = lazy(() => import('./components/downloadCV'));
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Tools/>
       <Projects />
       <CurrentlyWorking />
       <DownloadCV />

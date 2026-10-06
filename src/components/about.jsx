@@ -18,10 +18,10 @@ const About = () => {
         <TextType
           text={[
             "Senior Software Developer",
-            "With over 9 years of experience in software development, I specialize in building scalable, maintainable, and high-performance web applications",
-            "I'm proficient in modern JavaScript frameworks, cloud architecture, and UI/UX best practices — always focused on delivering value to users",
-            "I thrive in collaborative environments and enjoy mentoring teams, leading projects, and solving complex technical challenges",
-            "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or writing technical blogs",
+            "With over 10 years of experience in designing, developing, and maintaining innovative software solutions" ,
+            "Expert in full-stack web development, systems design, and project management", 
+            "Recent focus on applied AI: LLM integration and automation pipelines",
+            "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or writing technical blogs"
           ]}
           typingSpeed={60}
           deletingSpeed={30}
