@@ -7,7 +7,7 @@ const DownloadCV = () => {
       id="download-cv" 
       className="py-20 px-4 text-center relative"
       style={{
-        backgroundImage: "url('/hero_background.jpg')",
+        backgroundImage: `url('${import.meta.env.BASE_URL}hero_background.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed', // Optional: parallax effect
@@ -35,7 +35,7 @@ const DownloadCV = () => {
 
             {/* Download Button */}
             <a
-            href="/dalia_aly_CV.pdf"
+            href={`${import.meta.env.BASE_URL}dalia_aly_CV.pdf`}
             download="dalia_aly_CV.pdf"
             className="inline-flex items-center gap-3 bg-indigo-900/70 hover:bg-indigo-900 text-white font-semibold py-3 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
@@ -46,7 +46,7 @@ const DownloadCV = () => {
             {/* Optional: Secondary Link */}
             <div className="mt-6">
             <a
-                href="/dalia_aly_CV.docx"
+                href={`${import.meta.env.BASE_URL}dalia_aly_CV.docx`}
                 download="dalia_aly_CV.docx"
                 className="text-sm text-gray-500 hover:text-gray-700 hover:underline"
             >

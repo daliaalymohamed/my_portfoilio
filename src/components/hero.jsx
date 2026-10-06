@@ -9,7 +9,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/hero_background.jpg')",
+        backgroundImage: `url('${import.meta.env.BASE_URL}hero_background.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
