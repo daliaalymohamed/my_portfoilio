@@ -28,7 +28,7 @@ export  const projects = [
       title: "Portfolio Website",
       desc: "My own portfolio built with Vite and React.",
       tech: ["React", "Vite", "Tailwind CSS", "GSAP", "Framer Motion", "ReactBits"],
-      live: "https://daliaalyportfolio.netlify.app/",
+      live: "https://daliaalymohamed.github.io/my_portfoilio/",
       code: "https://github.com/daliaalymohamed/my_portfoilio",
       image: myPortfoilio,
       role: "Developer" 
